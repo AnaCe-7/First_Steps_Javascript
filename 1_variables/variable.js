@@ -1,36 +1,38 @@
-// Data type variables: numeric, text string, Boolean
-
+// 1) Data type variables , text string, Boolean
 let number = 7;
-let animal = "gato";
-let isTrue = true;
+let number_a = 100;
+let number_b = 133;
+let str = "I am very fond of ";
+let animal = "cats";
+let bool = true;
 
-console.log(number);
-console.log(animal);
-console.log(isTrue);
+// Display variables values in the browser console
+console.log(number, number_a , number_b);
+console.log(str);
+console.log(bool);
 
-document.write();
-document.write();
-document.write();
+// Display variable values on the browser screen
+document.write("The week has " + number + " days");
+document.write("<br>My favorite animal is the " + str);
+document.write("<br>Boolean variables have two possible values: false and " + bool);
 
-// Integer type variables and basic mathematical operations
+// 2) Integer type variables and basic mathematical operations
+let sum = number + number_a;
+let subtract = number_b - number_a;
+let multiply = number_a * number_b;
+let divide = number_b / number;
 
-let sum = number + 100;
-let subtract = number - 3;
-let multiply = number * 2;
-let divide = number / 1;
+console.log(sum);
+console.log(subtract);
+console.log(multiply);
+console.log(divide);
 
-console.log("number + 100 = ", sum);
-console.log("number - 3 = ", subtract);
-console.log("number * 2 = ", multiply);
-console.log("number / 1 = ", divide);
+document.write("<br>The sum of 7 + 100 equals " + sum);
+document.write("<br>The subtraction of 133 - 100 " + subtract);
+document.write("<br>The multiplication of 100 x 133 " + multiply);
+document.write("<br>The division of 133 by 7 equals " + divide);
 
-document.write();
-document.write();
-document.write();
-document.write();
-
-// Concatenation of text string variables
-
-console.log("My favorite animal is the " + animal);
-
-document.write("My favorite animal is the " + animal);
+// 3) Concatenation of text string variables
+let sentence = str + animal;
+console.log(sentence);
+document.write("<br>" + str + animal);
