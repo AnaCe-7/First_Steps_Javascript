@@ -8,12 +8,12 @@ let bool = true;
 
 // Display variables values in the browser console
 console.log(number, number_a , number_b);
-console.log(str);
+console.log(str, animal);
 console.log(bool);
 
 // Display variable values on the browser screen
 document.write("The week has " + number + " days");
-document.write("<br>My favorite animal is the " + str);
+document.write("<br>I love animals, but " + str + animal);
 document.write("<br>Boolean variables have two possible values: false and " + bool);
 
 // 2) Integer type variables and basic mathematical operations
@@ -35,4 +35,4 @@ document.write("<br>The division of 133 by 7 equals " + divide);
 // 3) Concatenation of text string variables
 let sentence = str + animal;
 console.log(sentence);
-document.write("<br>" + str + animal);
+document.write("<br>", sentence);
