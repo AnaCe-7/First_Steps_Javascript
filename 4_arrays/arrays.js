@@ -1,13 +1,16 @@
 // Array of 10 numbers
-let array_of_numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-console.log(array_of_numbers);
-document.write("This is an array of 10 numbers: " + array_of_numbers);
+let arrayOfNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(arrayOfNumbers);
+document.write("This is an array of 10 numbers: " + arrayOfNumbers);
 
 // Function that prints in console all the numbers in an array
-
-
+function printConsoleArray(arrayOfNumbers) {
+    for (let i = 0; i < arrayOfNumbers; i++)
+    console.log(i);
+};
 
 // Function that adds a number to an array
+
 
 // Function that removes the even numbers from an array
 
