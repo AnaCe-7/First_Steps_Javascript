@@ -1,5 +1,4 @@
 // 1)  Greeting function
-    // 1-a) A way to do it
 let person_name = "Sebastian";
 
 function greeting(){
@@ -8,47 +7,32 @@ function greeting(){
 
 console.log(greeting());
 document.write(greeting());
-// document.write(`Hola, ${person_name}`); --> otra opción
-
-
-/*
-    // 1-b) Another way to do it
-function greeting(person_name) {
-    let message = "Hola, " + person_name;
-    console.log(message);
-    document.write("<br>" + message); 
-}
-
-greeting("Sebastian");
-*/ 
-
-
-/*
-    // 1-c) Another way to do it
-let person_name = "Sebastian";
-
-function greeting(){
-    let message = "Hello, ";
-    console.log(message + person_name);
-    document.write("<br>" + message + person_name);
-}
-
-person_name = "Valentina"; //--> se ha reasignado un valor nuevo a la variable.
-greeting();
-*/ 
 
 // 2) Sum function
 function sum(){
     let number_a = 7;
     let number_b = 3;
     let result = number_a + number_b;
-    return "<br>The sum of " + number_a + " plus " + number_b + " equals " + result; //--> OJO con el <br> en la consola
+    return "The sum of " + number_a + " plus " + number_b + " equals " + result;
 }
 
 console.log(sum());
-document.write(sum());
-
+document.write("<br>", sum());
 
 // 3) Function of odd and even numbers
-//let odd_or_even = 
+function evenOrOdd(number) {
+    if (number % 2 === 0) {
+        return (`The number ${number} is even`);
+    } else { (number % 2 !== 0)
+        return (`The number ${number} is odd`);
+    }
+};
+// Test the function in the console
+/*
+console.log(evenOrOdd(10));
+console.log(evenOrOdd(7));
+*/
 
+// Display variable values on the browser screen
+document.write("<br>", evenOrOdd(20));
+document.write("<br>", evenOrOdd(33));
