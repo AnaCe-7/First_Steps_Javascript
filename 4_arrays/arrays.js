@@ -81,4 +81,5 @@ function capitalizeFirstLetter(array) {
     array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1).toLowerCase(); 
 };
 
-console.log(capitalizeFirstLetter(arrayNames));
+capitalizeFirstLetter(arrayNames);
+console.log(arrayNames);
