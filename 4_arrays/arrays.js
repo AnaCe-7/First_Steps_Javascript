@@ -83,3 +83,4 @@ function capitalizeFirstLetter(array) {
 
 capitalizeFirstLetter(arrayNames);
 console.log(arrayNames);
+document.write("<br>Quino's best known work was Mafalda. The main characters of this famous comic strip are: " + arrayNames);
