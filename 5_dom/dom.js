@@ -5,7 +5,10 @@ button.addEventListener('click', () => {
     alert("Sorry, at the moment this button leads nowhere");
 })
 
+
 // 2) Change the content of an HTML element
+let newTitle = document.getElementById("title");
+newTitle.innerHTML = "Document Object Model (DOM)";
 
 // 3) Hide and display HTML elements
 
