@@ -26,8 +26,13 @@ showButton.addEventListener("click", ()=> {
 
 
 // 4) Array of 10 names
+let olympianGods = ["Zeus", " Poseidon", " Ares", " Aphrodite", " Hera", " Demeter", " Athena", " Apollo", " Artemis", " Hephaestus"];
+console.log(olympianGods);
 
 // 5) Function that prints on screen a list of names from the array of names
+console.log (olympianGods.toString());
+document.write("<br>Ten of the twelve gods of Olympus are: " + olympianGods.toString());
+
 
 // 6) Array of numbers
 
