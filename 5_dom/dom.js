@@ -26,6 +26,27 @@ hideShowButton.addEventListener("click", ()=> {
 })
 
 // 3.b) With classList.toggle
+let container = document.querySelector('.domTestingContainer');
+
+let myBtn = document.createElement("button");
+myBtn.textContent = "Show Text";
+myBtn.classList.add("showHideBtn")
+
+let myText =  document.createElement('p')
+myText.textContent = "Tadam! the text appeared"
+myText.classList.add("invisible")
+
+container.appendChild(myBtn);
+container.appendChild(myText);
+
+myBtn.addEventListener("click", ()=> {
+    myText.classList.toggle("invisible");
+    if (myText.classList.contains("invisible")) {
+        myBtn.textContent = "Show Text";
+    } else {
+        myBtn.textContent = "Hide Text";
+    }
+});
 
 
 // 4) Array of 10 names

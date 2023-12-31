@@ -1,10 +1,22 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
- }
+#clickMeBtn {
+    width: 80px;
+}
 
- #hideShowBtn {
+#hideShowBtn {
+    width: 95px;
+}
+
+.showHideBtn {
+    margin-top: 15px;
+    width: 95px;
+}
+
+.domTestingContainer {
     display: flex;
     flex-direction: column;
- }
+    margin-top: 15px;
+}
+
+.invisible{
+    display: none;
+}
