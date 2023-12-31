@@ -1,5 +1,5 @@
 // 1) Display a message when clicking on a button
-let clickButton = document.getElementById("clickBtn");
+let clickButton = document.getElementById("clickMeBtn");
 
 clickButton.addEventListener("click", () => {
     alert("Sorry, at the moment this button leads nowhere");
@@ -12,10 +12,11 @@ newTitle.innerHTML = "Document Object Model (DOM)";
 
 
 // 3) Hide and display HTML elements
-let showButton = document.getElementById('showBtn');
-let hideText = document.getElementById("paragraphText");
+// 3.a) With style.display
+let hideShowButton = document.getElementById('hideShowBtn');
+let hideText = document.getElementById('hiddenText');
 
-showButton.addEventListener("click", ()=> {
+hideShowButton.addEventListener("click", ()=> {
     if (hideText.style.display === "none") {
         hideText.style.display = "block";
     }
@@ -23,6 +24,8 @@ showButton.addEventListener("click", ()=> {
         hideText.style.display = "none";
     }
 })
+
+// 3.b) With classList.toggle
 
 
 // 4) Array of 10 names
