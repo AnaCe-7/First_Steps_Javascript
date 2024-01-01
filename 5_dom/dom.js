@@ -71,7 +71,7 @@ function printOlympianGods () {
 printOlympianGods();
 
 
-// 6) Array of numbers
+// 6) Array of numbers & 7) Function that prints on screen how many numbers the array of numbers has
 function showArrayLength (array) {
     return "This array has " + array.length + " numbers";
 };
@@ -80,9 +80,47 @@ let arrayOfNumers = [1, 2, 3, 4, 5, 6, 7];
 document.write(showArrayLength(arrayOfNumers));
 
 
-// 7) Function that prints on screen how many numbers the array of numbers has
-
 // 8) Nodes to print a form
+function myform () {
+    let form = document.createElement('form')
+
+    // Form fields:
+    let labelName = document.createElement("label");
+    labelName.textContent = 'Name:';
+    let inputName = document.createElement("input");
+
+    let labelLastName = document.createElement("label");
+    labelLastName.textContent = 'Last Name:';
+    let inputLastName = document.createElement("input");
+
+    let labelPhoneNumber = document.createElement("label");
+    labelPhoneNumber.textContent = 'Phone number:';
+    let inputPhoneNumber = document.createElement("input");
+
+    let labelEmail = document.createElement("label");
+    labelEmail.textContent = 'Email:';
+    let inputEmail = document.createElement("input");
+
+    let formButton = document.createElement("button");
+    formButton.innerText="Send";
+
+    // Add elements to the form
+    form.appendChild(labelName);
+    form.appendChild(inputName);
+
+    form.appendChild(labelLastName);
+    form.appendChild(inputLastName);
+
+    form.appendChild(labelPhoneNumber);
+    form.appendChild(inputPhoneNumber);
+
+    form.appendChild(labelEmail);
+    form.appendChild(inputEmail);
+
+    form.appendChild(formButton);
+};
+
+myform();
 
 // 9) Nodes to print a table
 
