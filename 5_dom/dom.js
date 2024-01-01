@@ -81,9 +81,24 @@ document.write(showArrayLength(arrayOfNumers));
 
 
 // 8) Nodes to print a form
-function myform () {
-    let form = document.createElement('form')
+// Call the main element by its id
+const main = document.getElementById('main');
 
+// Create inside main a new container for the form
+let formDiv =  document.createElement('div');
+formDiv.classList.add("formContainer");
+main.appendChild(formDiv);
+
+// Create a heading for the form
+let formTitle = document.createElement('h2');
+formTitle.textContent = "Contact Form";
+formDiv.appendChild(formTitle);
+
+//Create the form element
+let form = document.createElement('form')
+formDiv.appendChild(form);
+
+function myform () {
     // Form fields:
     let labelName = document.createElement("label");
     labelName.textContent = 'Name:';
