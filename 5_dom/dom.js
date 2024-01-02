@@ -146,7 +146,12 @@ function myform() {
 
 myform();
 
+
 // 9) Nodes to print a table
+const table = document.getElementById('animalsTable');
+let tableRowHeaders = document.getElementById('tableHeadersContainer');
+let tableRowData = document.getElementById('tableDataContainer');
+
 
 // 10) Array of 10 objects with their respective key:value
 const animalsArray = [
