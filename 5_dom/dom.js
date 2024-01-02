@@ -73,11 +73,14 @@ printOlympianGods();
 
 // 6) Array of numbers & 7) Function that prints on screen how many numbers the array of numbers has
 function showArrayLength(array) {
-    return "This array has " + array.length + " numbers";
+    return "This array [4, 6, 7] has " + array.length + " numbers";
 };
 
-let arrayOfNumers = [1, 2, 3, 4, 5, 6, 7];
-document.write(showArrayLength(arrayOfNumers));
+let arrayOfNumbers = [4, 6, 7];
+
+let arrayOfNumbersText = document.createElement('p');
+arrayOfNumbersText.textContent = showArrayLength(arrayOfNumbers);
+container.appendChild(arrayOfNumbersText);
 
 
 // 8) Nodes to print a form
