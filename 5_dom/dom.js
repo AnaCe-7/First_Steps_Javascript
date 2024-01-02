@@ -103,20 +103,25 @@ function myform() {
     let labelName = document.createElement("label");
     labelName.textContent = 'Name:';
     let inputName = document.createElement("input");
+    inputName.setAttribute("type", "text");
 
     let labelLastName = document.createElement("label");
     labelLastName.textContent = 'Last Name:';
     let inputLastName = document.createElement("input");
+    inputLastName.setAttribute("type", "text");
 
     let labelPhoneNumber = document.createElement("label");
     labelPhoneNumber.textContent = 'Phone number:';
     let inputPhoneNumber = document.createElement("input");
+    inputPhoneNumber.setAttribute("type", "tel");
 
     let labelEmail = document.createElement("label");
     labelEmail.textContent = 'Email:';
     let inputEmail = document.createElement("input");
+    inputEmail.setAttribute("type", "email");
 
     let formButton = document.createElement("button");
+    formButton.classList.add("sendBtn");
     formButton.innerText = "Send";
 
     // Add elements to the form
@@ -133,6 +138,7 @@ function myform() {
     form.appendChild(inputEmail);
 
     form.appendChild(formButton);
+
 };
 
 myform();
