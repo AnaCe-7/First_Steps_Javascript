@@ -16,7 +16,7 @@ newTitle.innerHTML = "Document Object Model (DOM)";
 let hideShowButton = document.getElementById('hideShowBtn');
 let hideText = document.getElementById('hiddenText');
 
-hideShowButton.addEventListener("click", ()=> {
+hideShowButton.addEventListener("click", () => {
     if (hideText.style.display === "none") {
         hideText.style.display = "block";
     }
@@ -32,14 +32,14 @@ let myBtn = document.createElement("button");
 myBtn.textContent = "Show Text";
 myBtn.classList.add("showHideBtn")
 
-let myText =  document.createElement('p')
+let myText = document.createElement('p')
 myText.textContent = "Tadam! the text appeared"
 myText.classList.add("invisible")
 
 container.appendChild(myBtn);
 container.appendChild(myText);
 
-myBtn.addEventListener("click", ()=> {
+myBtn.addEventListener("click", () => {
     myText.classList.toggle("invisible");
     if (myText.classList.contains("invisible")) {
         myBtn.textContent = "Show Text";
@@ -53,18 +53,18 @@ myBtn.addEventListener("click", ()=> {
 let olympianGods = ["Zeus", " Poseidon", " Ares", " Aphrodite", " Hera", " Demeter", " Athena", " Apollo", " Artemis", " Hephaestus"];
 
 // 5) Function that prints on screen a list of names from the array of names
-let olympianText =  document.createElement('p')
+let olympianText = document.createElement('p')
 olympianText.textContent = "Ten of the twelve gods of Olympus are:"
 container.appendChild(olympianText);
 
-function printOlympianGods () {
+function printOlympianGods() {
     let myList = document.createElement("ul");
     olympianGods.forEach(function (god) {
-    let namesList = document.createElement("li");
+        let namesList = document.createElement("li");
         namesList.textContent = god;
         myList.appendChild(namesList);
     });
-    
+
     container.appendChild(myList);
 }
 
@@ -72,7 +72,7 @@ printOlympianGods();
 
 
 // 6) Array of numbers & 7) Function that prints on screen how many numbers the array of numbers has
-function showArrayLength (array) {
+function showArrayLength(array) {
     return "This array has " + array.length + " numbers";
 };
 
@@ -85,7 +85,7 @@ document.write(showArrayLength(arrayOfNumers));
 const main = document.getElementById('main');
 
 // Create inside main a new container for the form
-let formDiv =  document.createElement('div');
+let formDiv = document.createElement('div');
 formDiv.classList.add("formContainer");
 main.appendChild(formDiv);
 
@@ -98,7 +98,7 @@ formDiv.appendChild(formTitle);
 let form = document.createElement('form')
 formDiv.appendChild(form);
 
-function myform () {
+function myform() {
     // Form fields:
     let labelName = document.createElement("label");
     labelName.textContent = 'Name:';
@@ -117,7 +117,7 @@ function myform () {
     let inputEmail = document.createElement("input");
 
     let formButton = document.createElement("button");
-    formButton.innerText="Send";
+    formButton.innerText = "Send";
 
     // Add elements to the form
     form.appendChild(labelName);
@@ -140,5 +140,88 @@ myform();
 // 9) Nodes to print a table
 
 // 10) Array of 10 objects with their respective key:value
+const animalsArray = [
+    {
+        id: 1,
+        name: "Lorenzo the elephant",
+        status: "melancholic",
+        species: "mammals",
+        type: "herbivore",
+        gender: "male"
+    },
+    {
+        id: 2,
+        name: "Blue the fish",
+        status: "surprised",
+        species: "fish",
+        type: "gnathostomates",
+        gender: "male"
+    },
+    {
+        id: 3,
+        name: "Thomas the cat",
+        status: "happy",
+        species: "mammals",
+        type: "feline",
+        gender: "male"
+    },
+    {
+        id: 4,
+        name: "Tito the dog",
+        status: "hyperactive",
+        species: "mammals",
+        type: "canid",
+        gender: "male"
+    },
+    {
+        id: 5,
+        name: "Roberto the crocodile",
+        status: "angry",
+        species: "reptile",
+        type: "carnivorous",
+        gender: "male"
+    },
+    {
+        id: 6,
+        name: "Fernanda the whale",
+        status: "serene",
+        species: "mammals",
+        type: "cetacean",
+        gender: "female"
+    },
+    {
+        id: 7,
+        name: "Anabel the anaconda",
+        status: "hungry",
+        species: "reptile",
+        type: "carnivorous",
+        gender: "female"
+    },
+    {
+        id: 8,
+        name: "Leopoldo the turtle",
+        status: "nervous",
+        species: "reptile",
+        type: "oviparous",
+        gender: "male"
+    },
+    {
+        id: 9,
+        name: "Juana la rana ",
+        status: "shy",
+        species: "amphibians",
+        type: "oviparous",
+        gender: "female"
+    },
+    {
+        id: 10,
+        name: "Bianca the eagle",
+        status: "curious",
+        species: "bird",
+        type: "prey",
+        gender: "female"
+    }
+];
+
 
 // 11) Function that prints on screen each element of the object created above inside the table
