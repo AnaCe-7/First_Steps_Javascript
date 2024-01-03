@@ -182,7 +182,7 @@ function myTable() {
     tableRowHeaders.appendChild(headerKey5);
     tableRowHeaders.appendChild(headerKey6);
 
-    
+    animalsArray.forEach(addDataToTable);
 }
 
 
@@ -280,7 +280,6 @@ function addDataToTable (animal) {
     tableRowData.insertCell(4).textContent = animal.type;
     tableRowData.insertCell(5).textContent = animal.gender;
  
-    animalsArray.forEach(addDataToTable);
 };
 
 myTable();
