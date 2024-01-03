@@ -152,6 +152,8 @@ const table = document.getElementById('animalsTable');
 let tableRowHeaders = document.getElementById('tableHeadersContainer');
 let tableRowData = document.getElementById('tableDataContainer');
 
+table.appendChild(tableRowHeaders, tableRowData)
+
 function myTable() {
     // Table headers (in this first row goes the keys of my objects)
     let headerKey1 = document.createElement('th');
@@ -172,7 +174,7 @@ function myTable() {
     let headerKey6 = document.createElement('th');
     headerKey6.textContent = 'gender';
 
-    // Add elements to its container
+    // Add elements created to its container
     tableRowHeaders.appendChild(headerKey1);
     tableRowHeaders.appendChild(headerKey2);
     tableRowHeaders.appendChild(headerKey3);
@@ -180,6 +182,7 @@ function myTable() {
     tableRowHeaders.appendChild(headerKey5);
     tableRowHeaders.appendChild(headerKey6);
 
+    
 }
 
 
@@ -269,3 +272,15 @@ const animalsArray = [
 
 
 // 11) Function that prints on screen each element of the object created above inside the table
+function addDataToTable (animal) {
+    tableRowData.insertCell(0).textContent = animal.id;
+    tableRowData.insertCell(1).textContent = animal.name;
+    tableRowData.insertCell(2).textContent = animal.status;
+    tableRowData.insertCell(3).textContent = animal.species;
+    tableRowData.insertCell(4).textContent = animal.type;
+    tableRowData.insertCell(5).textContent = animal.gender;
+ 
+    animalsArray.forEach(addDataToTable);
+};
+
+myTable();
