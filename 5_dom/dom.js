@@ -152,6 +152,36 @@ const table = document.getElementById('animalsTable');
 let tableRowHeaders = document.getElementById('tableHeadersContainer');
 let tableRowData = document.getElementById('tableDataContainer');
 
+function myTable() {
+    // Table headers (in this first row goes the keys of my objects)
+    let headerKey1 = document.createElement('th');
+    headerKey1.textContent = 'id';
+
+    let headerKey2 = document.createElement('th');
+    headerKey2.textContent = 'name';
+
+    let headerKey3 = document.createElement('th');
+    headerKey3.textContent = 'status';
+
+    let headerKey4 = document.createElement('th');
+    headerKey4.textContent = 'species';
+
+    let headerKey5 = document.createElement('th');
+    headerKey5.textContent = 'type';
+
+    let headerKey6 = document.createElement('th');
+    headerKey6.textContent = 'gender';
+
+    // Add elements to its container
+    tableRowHeaders.appendChild(headerKey1);
+    tableRowHeaders.appendChild(headerKey2);
+    tableRowHeaders.appendChild(headerKey3);
+    tableRowHeaders.appendChild(headerKey4);
+    tableRowHeaders.appendChild(headerKey5);
+    tableRowHeaders.appendChild(headerKey6);
+
+}
+
 
 // 10) Array of 10 objects with their respective key:value
 const animalsArray = [
