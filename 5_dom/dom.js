@@ -57,18 +57,25 @@ let olympianText = document.createElement('p')
 olympianText.textContent = "Ten of the twelve gods of Olympus are:"
 container.appendChild(olympianText);
 
-function printOlympianGods() {
-    let myList = document.createElement("ul");
-    olympianGods.forEach(function (god) {
-        let namesList = document.createElement("li");
-        namesList.textContent = god;
-        myList.appendChild(namesList);
-    });
+const list = olympianGods.map (elem => {
+    return '<li>' + elem + '</li>';
+});
 
-    container.appendChild(myList);
-}
+const renderize = '<ul>' + list.join('') + '</ul>';
+document.write(renderize);
 
-printOlympianGods();
+// function printOlympianGods() {
+//     let myList = document.createElement("ul");
+//     olympianGods.forEach(function (god) {
+//         let namesList = document.createElement("li");
+//         namesList.textContent = god;
+//         myList.appendChild(namesList);
+//     });
+
+//     container.appendChild(myList);
+// }
+
+// printOlympianGods();
 
 
 // 6) Array of numbers & 7) Function that prints on screen how many numbers the array of numbers has
