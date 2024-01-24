@@ -12,9 +12,9 @@ console.log(str, animal);
 console.log(bool);
 
 // Display variable values on the browser screen
-document.write("The week has " + number + " days");
-document.write("<br>I love animals, and " + str + animal);
-document.write("<br>Boolean variables have two possible values: false and " + bool);
+document.write("The week has " + number + " days" + "<br>");
+document.write("<br>I love animals, and " + str + animal + "<br>");
+document.write("<br>Boolean variables have two possible values: false and " + bool + "<br>");
 
 // 2) Integer type variables and basic mathematical operations
 let sum = number + number_a;
@@ -27,10 +27,10 @@ console.log(subtract);
 console.log(multiply);
 console.log(divide);
 
-document.write("<br>The sum of 7 + 100 equals " + sum);
-document.write("<br>The subtraction of 133 - 100 " + subtract);
-document.write("<br>The multiplication of 100 x 133 " + multiply);
-document.write("<br>The division of 133 by 7 equals " + divide);
+document.write("<br>The sum of 7 + 100 equals " + sum + "<br>");
+document.write("<br>The subtraction of 133 - 100 " + subtract + "<br>");
+document.write("<br>The multiplication of 100 x 133 " + multiply + "<br>");
+document.write("<br>The division of 133 by 7 equals " + divide + "<br>");
 
 // 3) Concatenation of text string variables
 let sentence = str + animal;
