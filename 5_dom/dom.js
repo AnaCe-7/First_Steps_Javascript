@@ -2,10 +2,10 @@
 let clickButton = document.getElementById("clickMeBtn");
 
 clickButton.addEventListener("click", () => {
-    alert("Sorry, at the moment this button leads nowhere");
+    Swal.fire("Sorry, at the moment this button leads nowhere");
 })
 
-
+"Sorry, at the moment this button leads nowhere"
 // 2) Change the content of an HTML element
 let newTitle = document.getElementById("title");
 newTitle.innerHTML = "Document Object Model (DOM)";
@@ -57,33 +57,27 @@ let olympianText = document.createElement('p')
 olympianText.textContent = "Ten of the twelve gods of Olympus are:"
 container.appendChild(olympianText);
 
-const list = olympianGods.map (elem => {
-    return '<li>' + elem + '</li>';
-});
+function printOlympianGods() {
+    let myList = document.createElement("ul");
+    olympianGods.forEach(function (god) {
+        let namesList = document.createElement("li");
+        namesList.textContent = god;
+        myList.appendChild(namesList);
+    });
 
-const renderize = '<ul>' + list.join('') + '</ul>';
-document.write(renderize);
+    container.appendChild(myList);
+}
 
-// function printOlympianGods() {
-//     let myList = document.createElement("ul");
-//     olympianGods.forEach(function (god) {
-//         let namesList = document.createElement("li");
-//         namesList.textContent = god;
-//         myList.appendChild(namesList);
-//     });
-
-//     container.appendChild(myList);
-// }
-
-// printOlympianGods();
+printOlympianGods();
 
 
-// 6) Array of numbers & 7) Function that prints on screen how many numbers the array of numbers has
-function showArrayLength(array) {
-    return "This array [4, 6, 7] has " + array.length + " numbers";
-};
-
+// 6) Array of numbers
+// 7) Function that prints on screen how many numbers the array of numbers has
 let arrayOfNumbers = [4, 6, 7];
+
+function showArrayLength(array) {
+    return "This array has " + array.length + " numbers";
+};
 
 let arrayOfNumbersText = document.createElement('p');
 arrayOfNumbersText.textContent = showArrayLength(arrayOfNumbers);
@@ -91,25 +85,17 @@ container.appendChild(arrayOfNumbersText);
 
 
 // 8) Nodes to print a form
-// Call the main element by its id
-const main = document.getElementById('main');
+const myForm = document.getElementById('formContainer');
 
-// Create inside main a new container for the form
-let formDiv = document.createElement('div');
-formDiv.classList.add("formContainer");
-main.appendChild(formDiv);
-
-// Create a heading for the form
 let formTitle = document.createElement('h2');
 formTitle.textContent = "Contact Form";
-formDiv.appendChild(formTitle);
+myForm.appendChild(formTitle);
 
-//Create the form element
 let form = document.createElement('form')
-formDiv.appendChild(form);
+myForm.appendChild(form);
 
-function myform() {
-    // Form fields:
+function createForm() {
+
     let labelName = document.createElement("label");
     labelName.textContent = 'Name:';
     let inputName = document.createElement("input");
@@ -134,7 +120,6 @@ function myform() {
     formButton.classList.add("sendBtn");
     formButton.innerText = "Send";
 
-    // Add elements to the form
     form.appendChild(labelName);
     form.appendChild(inputName);
 
@@ -151,47 +136,7 @@ function myform() {
 
 };
 
-myform();
-
-
-// 9) Nodes to print a table
-const table = document.getElementById('animalsTable');
-let tableRowHeaders = document.getElementById('tableHeadersContainer');
-let tableRowData = document.getElementById('tableDataContainer');
-
-table.appendChild(tableRowHeaders, tableRowData)
-
-function myTable() {
-    // Table headers (in this first row goes the keys of my objects)
-    let headerKey1 = document.createElement('th');
-    headerKey1.textContent = 'id';
-
-    let headerKey2 = document.createElement('th');
-    headerKey2.textContent = 'name';
-
-    let headerKey3 = document.createElement('th');
-    headerKey3.textContent = 'status';
-
-    let headerKey4 = document.createElement('th');
-    headerKey4.textContent = 'species';
-
-    let headerKey5 = document.createElement('th');
-    headerKey5.textContent = 'type';
-
-    let headerKey6 = document.createElement('th');
-    headerKey6.textContent = 'gender';
-
-    // Add elements created to its container
-    tableRowHeaders.appendChild(headerKey1);
-    tableRowHeaders.appendChild(headerKey2);
-    tableRowHeaders.appendChild(headerKey3);
-    tableRowHeaders.appendChild(headerKey4);
-    tableRowHeaders.appendChild(headerKey5);
-    tableRowHeaders.appendChild(headerKey6);
-
-    animalsArray.forEach(addDataToTable);
-}
-
+createForm();
 
 // 10) Array of 10 objects with their respective key:value
 const animalsArray = [
@@ -221,7 +166,7 @@ const animalsArray = [
     },
     {
         id: 4,
-        name: "Tito the dog",
+        name: "Toby the dog",
         status: "hyperactive",
         species: "mammals",
         type: "canid",
@@ -261,7 +206,7 @@ const animalsArray = [
     },
     {
         id: 9,
-        name: "Juana la rana ",
+        name: "Juana the frog",
         status: "shy",
         species: "amphibians",
         type: "oviparous",
@@ -277,16 +222,51 @@ const animalsArray = [
     }
 ];
 
+// 9) Nodes to print a table
+const myTable = document.getElementById('animalsTable');
+let tableRowHeaders = document.getElementById('tableHeadersContainer');
+
+function createTable() {
+    let headerKey1 = document.createElement('th');
+    headerKey1.textContent = 'id';
+
+    let headerKey2 = document.createElement('th');
+    headerKey2.textContent = 'name';
+
+    let headerKey3 = document.createElement('th');
+    headerKey3.textContent = 'status';
+
+    let headerKey4 = document.createElement('th');
+    headerKey4.textContent = 'species';
+
+    let headerKey5 = document.createElement('th');
+    headerKey5.textContent = 'type';
+
+    let headerKey6 = document.createElement('th');
+    headerKey6.textContent = 'gender';
+
+    tableRowHeaders.appendChild(headerKey1);
+    tableRowHeaders.appendChild(headerKey2);
+    tableRowHeaders.appendChild(headerKey3);
+    tableRowHeaders.appendChild(headerKey4);
+    tableRowHeaders.appendChild(headerKey5);
+    tableRowHeaders.appendChild(headerKey6);
+
+    animalsArray.forEach(addDataToTable);
+}
 
 // 11) Function that prints on screen each element of the object created above inside the table
-function addDataToTable (animal) {
-    tableRowData.insertCell(0).textContent = animal.id;
-    tableRowData.insertCell(1).textContent = animal.name;
-    tableRowData.insertCell(2).textContent = animal.status;
-    tableRowData.insertCell(3).textContent = animal.species;
-    tableRowData.insertCell(4).textContent = animal.type;
-    tableRowData.insertCell(5).textContent = animal.gender;
+function addDataToTable(animal) {
+    let rowData = document.createElement('tr');
+    rowData.insertCell(0).textContent = animal.id;
+    rowData.insertCell(1).textContent = animal.name;
+    rowData.insertCell(2).textContent = animal.status;
+    rowData.insertCell(3).textContent = animal.species;
+    rowData.insertCell(4).textContent = animal.type;
+    rowData.insertCell(5).textContent = animal.gender;
  
+    myTable.appendChild(rowData);
 };
 
-myTable();
+createTable();
+
